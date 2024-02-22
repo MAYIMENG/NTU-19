@@ -70,5 +70,9 @@ def end():
     first_time = 1
     return (render_template("end.html"))
 
+@app.route("/real_end", methods=["GET", "POST"])
+def real_end():
+    return (render_template("real_end.html"))
+
 if __name__ == "__main__":
     app.run()
