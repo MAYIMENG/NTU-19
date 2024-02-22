@@ -37,6 +37,10 @@ def image_result():
     time.sleep(10)
     return(render_template("image_result.html",r=r[0]))
 
+@app.route("/text_gpt",methods=["GET","POST"])
+def image_gpt():
+    return(render_template("image_gpt.html"))
+
 @app.route("/end",methods=["GET","POST"])
 def end():
     global first_time
