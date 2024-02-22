@@ -5,10 +5,12 @@ import time
 from openai import OpenAI
 
 
-
-model = OpenAI(api_key="sk-qx4zKKzHnYRc7k8LuXyKHXdQi0gf5BcisgXBVZcXc9t4K8E9",
-               base_url="https://api.chatanywhere.tech/v1")
+openai_api_key = os.environ["OPENAI_API_TOKEN"] = "sk-qx4zKKzHnYRc7k8LuXyKHXdQi0gf5BcisgXBVZcXc9t4K8E9"
 os.environ["REPLICATE_API_TOKEN"] = "r8_GHyHGLZOntMYvtEgUZiE9vFdtMZrj7L2ZTtgM"
+
+
+model = OpenAI(api_key = openai_api_key,
+               base_url = "https://api.chatanywhere.tech/v1")
 
 app = Flask(__name__)
 
@@ -28,6 +30,11 @@ def main():
         r = request.form.get("r")
         first_time = 0
     return (render_template("main.html", r=r))
+
+#ntu
+@app.route("/about_ntu", methods=["GET", "POST"])
+def about_ntu():
+    return (render_template("about_ntu.html"))
 
 #image
 @app.route("/image_gpt", methods=["GET", "POST"])
