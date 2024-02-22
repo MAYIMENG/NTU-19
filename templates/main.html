@@ -1,21 +1,51 @@
 <style>
-    .container{width:100%;margin:auto}
-    @media (min-width:600px) {.container{width: 80%;}}
-    @media (min-width:768px) {.container{width: 60%;}}
-    @media (min-width:1024px) {.container{width: 50%;}}
-</style>
+  .container {
+    width: 100%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
 
+  }
+
+
+
+  @media (min-width:600px) {
+    .container {
+      width: 80%;
+    }
+  }
+
+  @media (min-width:768px) {
+    .container {
+      width: 60%;
+    }
+  }
+
+  @media (min-width:1024px) {
+    .container {
+      width: 50%;
+    }
+  }
+</style>
 <div class="container">
-<h1>Hi, {{r}}. How can help you today?</h1>
-    <p><img src="https://th.bing.com/th/id/R.b4a9309ed0301aebf5742571cd350ab2?rik=acLqUMMSS702BA&riu=http%3a%2f%2fwww.kuaipng.com%2fUploads%2fwater%2ftext%2f2017%2f06-11%2fgoods_water_7651_698_1186.23_.png&ehk=yGa48bZpMZEGw76NJvX6XaOEu2QgpIxFQ%2bd6aXiQP4s%3d&risl=&pid=ImgRaw&r=0"
-        width="100" height="100"></p>
-<form action="/image_gpt" method="post">
-    <input type = "submit" value="Image Generator" style="width:200px;height:100px;">
-</form>
-<form action="/text_gpt" method="post">
-    <input type = "submit" value="Text Generator" style="width:200px;height:100px;">
-</form>
-<form action="/end" method="post">
-    <input type = "submit" value="END" style="width:200px;height:100px;">
-</form>
+  <h1>Hi, {{r}}, How can help you today?</h1>
+  <img src="https://thumbs.dreamstime.com/b/d%E6%9C%89%E5%A4%A7%E8%93%9D%E8%89%B2%E9%97%AE%E5%8F%B7%E7%9A%84%E7%99%BD%E4%BA%BA-106882900.jpg"
+      width="50%" height="200px"style="margin-left:25%">
+  <p></p>
+  <form action="/about_ntu" method="post" style="margin-left: 25%;">
+    <input type="submit" value="About NTU" style="width:50%;height:100px;background-color: #ECEFF1;">
+  </form>
+  <p></p>
+  <form action="/text_gpt" method="post" style="margin-left: 25%;">
+    <input type="submit" value="Text Generator" style="width:50%;height:100px;background-color: #CFD8DC;">
+  </form>
+  <p></p>
+  <form action="/image_gpt" method="post" style="margin-left: 25%;">
+    <input type="submit" value="Image Generator" style="width:50%;height:100px;background-color: #B0BEC5;">
+  </form>
+  <p></p>
+  <form action="/end" method="post" style="margin-left: 25%;">
+    <input type="submit" value="END" style="width:50%;height:100px;background-color: #90A4AE;">
+  </form>
 </div>
