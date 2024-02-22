@@ -1,0 +1,26 @@
+<style>
+    .container {
+      width: 100%;
+      margin-top: 10%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10%;
+  }
+@media (min-width:600px){.container{width: 80%;}}
+@media (min-width:768px){.container{width: 60%;}}
+@media (min-width:1024px){.container{width: 50%;}}
+</style>
+
+
+<div class="container">
+    <h1>Welcome to NTU :</h1>
+    <p><img src="https://www.greenqueen.com.hk/wp-content/uploads/2020/07/nanyang-technological-university.jpeg" 
+        style="width:100%; height:50%;"></p>
+    <h3>NTU stands for Nanyang Technological University, a research university in Singapore known for its strong emphasis on engineering, science, and technology education. It is consistently ranked among the top universities in Asia and the world.</h3>
+    <form action="/main" method="post" style="margin-left: 25%;">
+        <input type="submit" value="Main" style="width:50%;height:100px;background-color: #F1F8E9;">
+    </form>
+    <form action="/end" method="post" style="margin-left: 25%;">
+        <input type="submit" value="End" style="width:50%;height:100px;background-color: #DCEDC8;">
+    </form>
+</div>
