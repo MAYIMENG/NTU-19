@@ -4,8 +4,14 @@ import os
 import time
 from openai import OpenAI
 
-app = Flask(__name__)
+os.environ["OPENAI_API_TOKEN"]="sk-qx4zKKzHnYRc7k8LuXyKHXdQi0gf5BcisgXBVZcXc9t4K8E9",base_url="https://api.chatanywhere.tech/v1"
 os.environ["REPLICATE_API_TOKEN"]="r8_2idkAutIh1jCAVVRIbEDgqt9zNUdbhG2cS1AF"
+
+model = OpenAI(api_key="sk-qx4zKKzHnYRc7k8LuXyKHXdQi0gf5BcisgXBVZcXc9t4K8E9",base_url="https://api.chatanywhere.tech/v1")
+
+
+app = Flask(__name__)
+
 
 r = ""
 first_time = 1
