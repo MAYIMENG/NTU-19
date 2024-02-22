@@ -5,7 +5,7 @@ import time
 from openai import OpenAI
 
 
-openai_api_key = os.environ["OPENAI_API_TOKEN"] = "sk-qx4zKKzHnYRc7k8LuXyKHXdQi0gf5BcisgXBVZcXc9t4K8E9"
+openai_api_key = os.environ["OPENAI_API_TOKEN"]
 os.environ["REPLICATE_API_TOKEN"] = "r8_GHyHGLZOntMYvtEgUZiE9vFdtMZrj7L2ZTtgM"
 
 
@@ -35,7 +35,7 @@ def main():
 @app.route("/about_ntu", methods=["GET", "POST"])
 def about_ntu():
     return (render_template("about_ntu.html"))
-
+  
 #image
 @app.route("/image_gpt", methods=["GET", "POST"])
 def image_gpt():
