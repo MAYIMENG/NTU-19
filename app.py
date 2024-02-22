@@ -25,9 +25,16 @@ def main():
 def image_gpt():
     return(render_template("image_gpt.html"))
 
-@app.route("/image_result",methods=["GET","POST"])
-def image_result():
+@app.route("/text_gpt",methods=["GET","POST"])
+def text_gpt():
+    return(render_template("text_gpt.html"))
+
+@app.route("/text_result",methods=["GET","POST"])
+def text_result():
     q = request.form.get("q")
+
+
+    
     r = replicate.run(
     "stability-ai/stable-diffusion:db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf",
     input={
@@ -36,10 +43,6 @@ def image_result():
     )
     time.sleep(10)
     return(render_template("image_result.html",r=r[0]))
-
-@app.route("/text_gpt",methods=["GET","POST"])
-def image_gpt():
-    return(render_template("image_gpt.html"))
 
 @app.route("/end",methods=["GET","POST"])
 def end():
